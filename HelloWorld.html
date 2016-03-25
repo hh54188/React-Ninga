@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.js"></script>
+  <script type="text/javascript" src="https://fbcdn-dragon-a.akamaihd.net/hphotos-ak-xat1/t39.3284-6/12056998_1697020110531721_1758939694_n.js"></script>
+  <script type="text/javascript" src="https://fbcdn-dragon-a.akamaihd.net/hphotos-ak-xtp1/t39.3284-6/12056967_908623935885795_236887341_n.js"></script> -->
+
+  <script type="text/javascript" src="./lib/react.js"></script>
+  <script type="text/javascript" src="./lib/react-dom.js"></script>
+  <script type="text/javascript" src="./lib/react-with-addons.js"></script>
+</head>
+<body>
+<div id="app"></div>
+<script type="text/javascript">
+var HelloWorld = React.createClass({
+    getInitialState: function () {
+        return {
+            name: 'liguangyi'
+        }
+    },
+    handleChange: function (e) {
+        this.setState({
+            name: e.target.value
+        });
+    },
+    render: function(){
+        var childEleP = React.DOM.p(null, 'Hello ' + this.state.name);
+        
+        var childEleInput = React.DOM.input({
+            type: 'text',
+            value: this.state.name,
+            onChange: this.handleChange
+        });
+        
+        var HelloWorld = React.createElement('HelloWorld', null, childEleP, childEleInput);
+        return HelloWorld;
+    }
+});
+
+ReactDOM.render(React.createElement(HelloWorld), document.getElementById('app'));
+</script>
+</body>
+</html>
