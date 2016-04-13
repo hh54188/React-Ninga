@@ -6,3 +6,9 @@ module.exports = React.createClass({
 		return DOM.h1(null, 'HELLO WORLD');
     }
 })
+
+// module.exports = React.createClass({
+// 	render: function(){
+// 		return <h1>Hello WORLD</h1>;
+//     }
+// })
