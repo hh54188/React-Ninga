@@ -1,11 +1,15 @@
 var React = require("React");
-// var ReactDOM = React.DOM;
+var DOM = React.DOM;
 var ReactDOM = require('React-DOM');
-var HelloComponent = require("./HelloComponent");
-var greeter = require('./Greeter.js');
 
-// console.log(ReactDOM.h1);
+var HelloWorld = React.createClass({
+    render: function(){
+        return (
+            <div id="container">
+                <h1>Hello World</h1>
+            </div>
+        )
+    }
+});
 
-// ReactDOM.render(React.createElement(HelloComponent), document.querySelector("#container"));
-
-// document.getElementById('contaienr').appendChild(greeter());
+ReactDOM.render(<HelloWorld />, document.getElementById('container'));
